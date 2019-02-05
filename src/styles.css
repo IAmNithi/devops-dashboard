@@ -1,0 +1,27 @@
+body {
+  background-color: #25343F;
+  color: #ffffff;
+}
+/* stylelint-disable selector-list-comma-newline-after */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  /* // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #A9A9A9;
+  /* // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}

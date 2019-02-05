@@ -1,0 +1,16 @@
+<div class="row pt-4 pb-2 text-center bottom-border" *ngFor="let mark of marketplace">
+    <div class="col-12 pb-2">
+      <span class="service-name">
+          {{mark.name}}
+      </span>
+      <span class="service-type">
+          {{mark.type}}
+      </span>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let ma of mark.apps">
+      <div class="card-box center-block">
+        <img src={{ma?.logo}} class="service-image"/>
+        <div class="service-provider">{{ma?.name}}</div>
+      </div>
+    </div>
+  </div>

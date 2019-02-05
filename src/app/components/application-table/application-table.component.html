@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      <h2 class="main-container-title">Applications</h2>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <div class="form-group">
+        <input type="text" class="form-control form-control-custom"
+          placeholder="Search App" (keyup)="searchApp($event)" />
+      </div>
+    </div>
+  </div>
+  <div class="table-custom">
+    <div class="table-menu-header">
+      <div class="option" [ngClass]="{'option-active':activeTab === 'all'}" (click)="tableNav('all')">
+        All
+      </div>
+      <div class="option" [ngClass]="{'option-active':activeTab === 'running'}" (click)="tableNav('running')">
+        Running
+      </div>
+      <div class="option" [ngClass]="{'option-active':activeTab === 'stopped'}" (click)="tableNav('stopped')">
+        Stopped
+      </div>
+    </div>
+    <div class="table-custom-body">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">App Name</th>
+            <th scope="col">Runtime</th>
+            <th scope="col">Health</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let app of applicationData">
+            <td>
+              <img src={{app?.avatar}} class="table-img" />
+              {{app?.name}}</td>
+            <td>{{app?.runtime}}</td>
+            <td>
+              <div *ngIf="app?.health">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Basic_green_dot.png" class="table-img" />
+                Running
+              </div>
+              <div *ngIf="!app || !app?.health">
+                <img src="http://www.clker.com/cliparts/y/Q/7/r/3/y/light-green-dot.svg.hi.png" class="table-img" />
+                Stopped
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

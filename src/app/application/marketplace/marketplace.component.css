@@ -1,0 +1,48 @@
+.display-4 {
+	font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+	.display-4 {
+		font-size: 3rem;
+	}
+}
+
+.flex-auto {
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
+
+.h-250 {
+	height: 250px;
+}
+@media (min-width: 768px) {
+	.h-md-250 {
+		height: 250px;
+	}
+}
+
+/*
+ * Blog name and description
+ */
+.bg-custom {
+	background-color: #3b4b54;
+}
+
+/*
+* image logo
+*/
+.image-logo {
+	width: 65px;
+}
+
+/*
+* main container
+*/
+.main-container {
+	background-color: #3b4b54;
+	min-height: 700px;
+}
+.page-header {
+	font-size: 2rem;
+	font-weight: 700;
+}

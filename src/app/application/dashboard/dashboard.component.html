@@ -1,0 +1,21 @@
+<div class="container">
+    <app-header></app-header>
+    <app-menu></app-menu>
+  </div>
+
+  <main class="container main-container pt-2 pb-2">
+    <div class="row pb-4">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+        <app-progress-bar></app-progress-bar>
+        <span>900 GB of 1000 GB Filled</span>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+        <app-apphealth></app-apphealth>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+        <app-services></app-services>
+      </div>
+    </div>
+  <app-application-table [application]="application"></app-application-table>
+  <app-services-table [service]="service"></app-services-table>
+  </main>
